@@ -1,0 +1,36 @@
+
+INSTRUMENTS:
+1. Jira, Confluence, Jenkins, TestRail, git
+2. Scrum (daily standup, planning, demo, retro)
+3. Xcode
+4. Developer Tools (Instruments, Accessibility Inspector)
+5. Additional Tools for Xcode (Network Link Conditioner)
+6. Terminal (основные команды Bash)
+7. Console
+8. Activity Monitor
+9. Sandbox
+10. Codesign
+11. Снифферы (Mitmproxy, Wireshark, Charles)
+12. Keychain
+13. Структура файловой системы:
+	- launchd (launch agents, launch daemons), (http://www.launchd.info), (launchctl list | grep <app>) 
+	- структура macOS приложения (Info.plist)
+	- defaults (plist-files)
+	- структура ~/Library:
+		- Preferences
+		- LaunchAgents
+		- Application Support
+		- Caches
+		- Containers
+		- Developer
+		- Keychains
+		- Logs
+14. Quarantine (~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2)
+15. Notarization (xcrun altool)
+16. System Preferences
+	- Scroll Bar
+	- Light / Dark Mode
+	- Network Link Conditioner
+18. LaunchAgents / LaunchDaemons / LoginItems
+19. APNS (Push notifications)
+20. GateKeeper
