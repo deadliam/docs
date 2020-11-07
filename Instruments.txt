@@ -7,11 +7,11 @@ INSTRUMENTS:
 5. Additional Tools for Xcode (Network Link Conditioner)
 6. Terminal (основные команды Bash)
 7. Console
-8. Activity Monitor
-9. Sandbox
-10. Codesign
+8. Activity Monitor - показывает запущенные процессы, позволяет сортировать их по нагрузке на процессор, использованию памяти и другим параметрам, просматривать использование сети, диска и энергии аккумулятора ноутбука, принудительно завершать запущенные программы
+9. Sandbox - предназначен, уберечь систему и данные пользователя от повреждений, на случай если приложение будет скомпрометировано. Приложения, которые работают из "песочницы" делают запрос на доступ к файлам и функциям системы, например, на доступ к веб-камере — этот процесс добавляет дополнительный уровень безопасности ОС
+10. Codesign - Команда codeign используется для создания, проверки и отображения подписей кода, а также для исследования динамического статуса подписанного кода в системе. Процесс сертифицирования подписей приложения
 11. Снифферы (Mitmproxy, Wireshark, Charles)
-12. Keychain
+12. Keychain - технология, с помощью которой в защищённом виде, сохраняются личные данные пользователя, пароли, логины, данные кредитных карт 
 13. Структура файловой системы:
 	- launchd (launch agents, launch daemons), (http://www.launchd.info), (launchctl list | grep <app>) 
 	- структура macOS приложения (Info.plist)
@@ -30,7 +30,19 @@ INSTRUMENTS:
 16. System Preferences
 	- Scroll Bar
 	- Light / Dark Mode
-	- Network Link Conditioner
+	- Network Link Conditioner - инструмент для тестирования приложений с плохой связью с интернетом. Этот механизм позволяет изменить пропускную способность интернета
 18. LaunchAgents / LaunchDaemons / LoginItems
-19. APNS (Push notifications)
-20. GateKeeper
+Приложения которые работают без графического интерфейса
+	User 	Agents	~/Library/LaunchAgents			Currently logged in user
+	Global Agents	/Library/LaunchAgents			Currently logged in user
+	Global Daemons	/Library/LaunchDaemons			root or the user specified with the key UserName
+	System Agents	/System/Library/LaunchAgents	Currently logged in user
+	System Daemons	/System/Library/LaunchDaemons	root or the user specified with the key UserName
+
+19. APNS (Push notifications) - сервис отправки push-уведомлений
+	iOS запрашивает у сервера Apple Push Notification Service (APNS) токен девайса.
+	Приложение получает токен девайса. Можно считать, что токен – это адрес для отправки push-уведомлений.
+	Приложение отправляет токен девайса на ваш сервер.
+	Когда произойдёт какое-либо событие для вашего приложения, сервер отправит push-уведомление в APNS.
+	APNS отправит push-уведомление на девайс пользователя
+20. GateKeeper - компонент операционной системы, контролирующий запуск программ. В поздних версиях mac OS он настроен по-умолчанию на запуск программ только с цифровой подписью разработчика или скачанных из mac app store
